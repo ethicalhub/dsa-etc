@@ -4,6 +4,7 @@ console.log("------ Count the number of digits of a given number without convert
 let a = 0
 let b = 2346030
 let c = -2354
+// digitCount = Math.floor( log10(x) + 1) if the log10 is available... because the number of time any digit are divisible by 10 is the answer.
 
 
 const countDigit = (x)=>{
@@ -16,7 +17,7 @@ const countDigit = (x)=>{
     //     x = -x;
     // }
 
-    x = Math.abs(x)
+    x = Math.abs(x) 
     
     while(x>0){
         x = Math.floor(x/10);  
@@ -29,3 +30,6 @@ const countDigit = (x)=>{
 console.log(countDigit(a))
 console.log(countDigit(b))
 console.log(countDigit(c))
+
+
+// Time Complexity - O(log10(N))
