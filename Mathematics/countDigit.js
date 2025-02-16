@@ -8,7 +8,8 @@ let c = -2354
 
 const countDigit = (x)=>{
     let digitCount = 0;
-    if(x===0) return 1;
+    if(x===0) return 1; // Special case for 0
+
 
     // To handle negative integers but it can also be handles with Math.abs()
     // if(x<0) {
@@ -17,7 +18,7 @@ const countDigit = (x)=>{
 
     x = Math.abs(x)
     
-    while(x>=1){
+    while(x>0){
         x = Math.floor(x/10);  
         digitCount++;
     }
