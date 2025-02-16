@@ -7,7 +7,7 @@ let c = -2354
 // digitCount = Math.floor( log10(x) + 1) if the log10 is available... because the number of time any digit are divisible by 10 is the answer.
 
 
-const countDigit = (x)=>{
+export const countDigit = (x)=>{
     let digitCount = 0;
     if(x===0) return 1; // Special case for 0
 
