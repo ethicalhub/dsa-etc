@@ -32,7 +32,8 @@ console.log("Optimized Solution")
 const allDivisorOptimized = (x)=>{
     if (x <= 0) return console.log("Input should be a positive integer");
 
-    for(let i=1; i<=Math.floor(Math.sqrt(x)); i++){
+    // Math.floor(Math.sqrt(x)) can also be written as i*i < n
+    for(let i=1; i * i <= x; i++){
        if(x%i === 0) {
         console.log(i)
 
@@ -47,3 +48,5 @@ const allDivisorOptimized = (x)=>{
 
 allDivisorOptimized(c)
 allDivisorOptimized(d)
+// Try printing it in a sorted way...
+
